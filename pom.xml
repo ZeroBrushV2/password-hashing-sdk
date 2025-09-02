@@ -6,7 +6,17 @@
 	<artifactId>password-hashing-sdk</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 
-	<properties>
+    <name>Password Hashing SDK</name>
+    <description>A robust Java library for secure password hashing using Argon2 algorithm through Bouncy Castle
+        provider. This SDK provides a simple yet powerful interface for password hashing and verification, implementing
+        industry-standard cryptographic practices. Features include configurable memory and CPU cost parameters, salt
+        generation, and built-in protection against timing attacks. The implementation leverages the Bouncy Castle
+        cryptographic provider for Argon2 operations, combined with secure random number generation for salt creation.
+        Suitable for applications requiring strong password security with NIST-compliant hashing algorithms.
+    </description>
+    <url>https://github.com/ZeroBrushV2/password-hashing-sdk</url>
+
+    <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -30,6 +40,8 @@
         <commons-lang3.version>3.18.0</commons-lang3.version>
         <surefire.version>3.5.3</surefire.version>
         <jupiter.version>5.13.4</jupiter.version>
+        <jar.plugin.version>3.4.2</jar.plugin.version>
+        <publishing.plugin.version>0.8.0</publishing.plugin.version>
 	</properties>
 
 	<dependencies>
@@ -152,10 +164,24 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.4.2</version>
+				<version>${jar.plugin.version}</version>
 			</plugin>
-
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>${publishing.plugin.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
+
+    <scm>
+        <url>https://github.com/ZeroBrushV2/password-hashing-sdk</url>
+        <connection>scm:git:git://github.com/ZeroBrushV2/password-hashing-sdk.git</connection>
+        <developerConnection>scm:git:ssh://github.com:ZeroBrushV2/password-hashing-sdk.git</developerConnection>
+    </scm>
 
 </project>

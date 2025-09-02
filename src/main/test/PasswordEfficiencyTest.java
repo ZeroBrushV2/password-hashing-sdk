@@ -12,12 +12,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
-* Class to be used to evaluate the effectiveness of the settings to be used. <br> <br>
+ * Class to be used to evaluate the effectiveness of the settings to be used.
+ * <br> <br>
  * In case of changes in the setting it is necessary to test to verify that the settings do not go to vary how long the hashing of a password is carried out
  * <br> <br>
  * For security reasons make sure that the hashing time does not varied from the one already current and that falls within the set parameters
  *
- * 
  * @author ZeroBrushV2
  *
  */
