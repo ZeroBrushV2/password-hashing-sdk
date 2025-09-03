@@ -8,7 +8,7 @@ The purpose of the library is to provide unified methods, and customizable throu
 
 ## How it works
 
-The bookcase is based on the use of [Bouncycastle] (https://www.bouncycastle.org/), which provides, among the many features, also various hashing algorithms.
+The library is based on the use of [Bouncycastle] (https://www.bouncycastle.org/), which provides, among the many features, also various hashing algorithms.
 
 ### The core implementation
 In addition to BouncyCastle, a custom management of the string produced by hashing has been integrated, this management was based on how the basic library of Argon2 encodes the result of the hashing.
